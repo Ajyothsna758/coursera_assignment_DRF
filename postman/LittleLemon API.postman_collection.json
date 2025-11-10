@@ -1,0 +1,1446 @@
+{
+	"info": {
+		"_postman_id": "c1a7ae91-1544-468f-b8d0-954a9ffe8c6c",
+		"name": "LittleLemon API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "49770356",
+		"_collection_link": "https://jyoece758-4163142.postman.co/workspace/jyothsna's-Workspace~e0a84def-271f-491b-8b55-f958c0aa1699/collection/49770356-c1a7ae91-1544-468f-b8d0-954a9ffe8c6c?action=share&source=collection_link&creator=49770356"
+	},
+	"item": [
+		{
+			"name": "user management",
+			"item": [
+				{
+					"name": "admin add user to Manager group",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 6f19c68feab7fb2eed03ed20ffc55872af137c03",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "customer1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/admin/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "admin  remove user from Manager group",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 6f19c68feab7fb2eed03ed20ffc55872af137c03",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "customer1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/admin/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "admin groups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 6f19c68feab7fb2eed03ed20ffc55872af137c03",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/admin/groups/"
+					},
+					"response": []
+				},
+				{
+					"name": "doser token creation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "manager1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password789",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/token/login/"
+					},
+					"response": []
+				},
+				{
+					"name": "doser user creation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token  65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "dc3",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password789",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dc3@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "admin all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 6f19c68feab7fb2eed03ed20ffc55872af137c03",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/admin/users-list/"
+					},
+					"response": []
+				},
+				{
+					"name": "doser all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 6f19c68feab7fb2eed03ed20ffc55872af137c03",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "doser user me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/users/me/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category end points",
+			"item": [
+				{
+					"name": "all categories for all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 55f66cfa593b997ff18486713d302509f21cc7dd",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/category/"
+					},
+					"response": []
+				},
+				{
+					"name": "single category item for all users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/category/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "create category as manager",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Japan",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "japan_famous_food",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/category/"
+					},
+					"response": []
+				},
+				{
+					"name": "create category as customer/dc/admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 20bc947972caa16a51015bded9c3ff44f5394fcd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/category/"
+					},
+					"response": []
+				},
+				{
+					"name": "single category update as manager",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Japan",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "japan_food",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/category/5/"
+					},
+					"response": []
+				},
+				{
+					"name": "single category update as customer/dc/admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 20bc947972caa16a51015bded9c3ff44f5394fcd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Japan",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "japan_food",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/category/5/"
+					},
+					"response": []
+				},
+				{
+					"name": "single category partial update as manager",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "slug",
+									"value": "japan_famous_food_item",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/category/5/"
+					},
+					"response": []
+				},
+				{
+					"name": "single category partial update as customer/dc/admin",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 55f66cfa593b997ff18486713d302509f21cc7dd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "slug",
+									"value": "japan_famous_food_item",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/category/5/"
+					},
+					"response": []
+				},
+				{
+					"name": "single category delete as dc/admin/customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 55f66cfa593b997ff18486713d302509f21cc7dd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/category/5/"
+					},
+					"response": []
+				},
+				{
+					"name": "single category delete as manager",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/category/6/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MenuItem end points",
+			"item": [
+				{
+					"name": "all menu items for all users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 55f66cfa593b997ff18486713d302509f21cc7dd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/menu-items/"
+					},
+					"response": []
+				},
+				{
+					"name": "create menuItem as manager",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token c8c45cbc1c33a58fc3fa3098e1cf4537c790843f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Payasam",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "33.12",
+									"type": "text"
+								},
+								{
+									"key": "featured",
+									"value": "False",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/menu-items/"
+					},
+					"response": []
+				},
+				{
+					"name": "create menuItem as dc/customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 06fd5b2e065513c4e64895a40f92ceedc7f9028a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Bread",
+									"type": "text"
+								},
+								{
+									"key": "featured",
+									"value": "False",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10.88",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/menu-items/"
+					},
+					"response": []
+				},
+				{
+					"name": "create menuItem as admin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 6f19c68feab7fb2eed03ed20ffc55872af137c03",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Salad",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "featured",
+									"value": "False",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "87.00",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/menu-items/"
+					},
+					"response": []
+				},
+				{
+					"name": "single menu item for all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 116287d70b4f59003679d731174fa26169346dfd",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/menu-items/2/"
+					},
+					"response": []
+				},
+				{
+					"name": "single menu item update as manager",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Udon Noodles",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "78.34",
+									"type": "text"
+								},
+								{
+									"key": "featured",
+									"value": "True",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/menu-items/2/"
+					},
+					"response": []
+				},
+				{
+					"name": "single menu item update as customer/dc",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 116287d70b4f59003679d731174fa26169346dfd",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/menu-items/2/"
+					},
+					"response": []
+				},
+				{
+					"name": "single menu item update as admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 6f19c68feab7fb2eed03ed20ffc55872af137c03",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Chicken",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "4.78",
+									"type": "text"
+								},
+								{
+									"key": "featured",
+									"value": "False",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/menu-items/3/"
+					},
+					"response": []
+				},
+				{
+					"name": "single menu item partial update as manager",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "price",
+									"value": "89.34",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/menu-items/3/"
+					},
+					"response": []
+				},
+				{
+					"name": "single menu item partial update as customer/dc",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 20bc947972caa16a51015bded9c3ff44f5394fcd",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/menu-items/4/"
+					},
+					"response": []
+				},
+				{
+					"name": "single menu item partial update admin",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 6f19c68feab7fb2eed03ed20ffc55872af137c03",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "price",
+									"value": "56.99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/menu-items/3/?price=44.67",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"menu-items",
+								"3",
+								""
+							],
+							"query": [
+								{
+									"key": "price",
+									"value": "44.67"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single menu item delete as manager",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/menu-items/6/"
+					},
+					"response": []
+				},
+				{
+					"name": "single menu item delete as dc/customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 20bc947972caa16a51015bded9c3ff44f5394fcd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/menu-items/6/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "manager group end points",
+			"item": [
+				{
+					"name": "list of all managers as manager",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/groups/manager/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "list of all managers as dc/customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 55f66cfa593b997ff18486713d302509f21cc7dd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "manager3",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/groups/manager/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "add user in manager's group as manager",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "manager3",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/groups/manager/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "add user in manager's group as dc/customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 55f66cfa593b997ff18486713d302509f21cc7dd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "manager3",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/groups/manager/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user from manager's group as dc/customer/admin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 6f19c68feab7fb2eed03ed20ffc55872af137c03",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/groups/manager/users/9/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user from manager's group as manager",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/groups/manager/users/11/"
+					},
+					"response": []
+				},
+				{
+					"name": "list of all dc as manager",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/groups/delivery-crew/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "list of all dc as dc/customer/admin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 20bc947972caa16a51015bded9c3ff44f5394fcd",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/groups/delivery-crew/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "add user in dc's group as manager",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "dc3",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/groups/delivery-crew/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "add user in dc's group as dc/customer/admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 55f66cfa593b997ff18486713d302509f21cc7dd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "dc3",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/groups/delivery-crew/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user from dc's group as dc/customer/admin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 6f19c68feab7fb2eed03ed20ffc55872af137c03",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/groups/delivery-crew/users/10/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user from dc's group as manager",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/groups/delivery-crew/users/9/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart management end points",
+			"item": [
+				{
+					"name": "all cart items as customer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token dbd19964c6abc39dbc0924a7cd75b5fb80105aad",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/cart/menu-items/"
+					},
+					"response": []
+				},
+				{
+					"name": "create/add cart item as customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token dbd19964c6abc39dbc0924a7cd75b5fb80105aad",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "menuitem",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/cart/menu-items/"
+					},
+					"response": []
+				},
+				{
+					"name": "all cart items as dc/manager",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/cart/menu-items/"
+					},
+					"response": []
+				},
+				{
+					"name": "create/add cart item as dc/manager",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/cart/menu-items/"
+					},
+					"response": []
+				},
+				{
+					"name": "cart items delete as dc/manager",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/cart/menu-items/"
+					},
+					"response": []
+				},
+				{
+					"name": "cart items delete as customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token dbd19964c6abc39dbc0924a7cd75b5fb80105aad",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/cart/menu-items/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order management end points",
+			"item": [
+				{
+					"name": "create order/ add cart items to order as customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 20bc947972caa16a51015bded9c3ff44f5394fcd",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/orders/"
+					},
+					"response": []
+				},
+				{
+					"name": "all orders created by customer as customer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token dbd19964c6abc39dbc0924a7cd75b5fb80105aad",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "all orders assigned to dc as dc",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 55f66cfa593b997ff18486713d302509f21cc7dd",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/orders/"
+					},
+					"response": []
+				},
+				{
+					"name": "all created orders as manager/admin",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/orders/"
+					},
+					"response": []
+				},
+				{
+					"name": "create order as manager/dc/admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 6f19c68feab7fb2eed03ed20ffc55872af137c03",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/orders/"
+					},
+					"response": []
+				},
+				{
+					"name": "single order as customer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 20bc947972caa16a51015bded9c3ff44f5394fcd",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/orders/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "single order as manager/dc/customer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/orders/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "single order update as customer/dc/admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 55f66cfa593b997ff18486713d302509f21cc7dd",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/orders/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "single order update as manager",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "orderitem_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "True",
+									"type": "text"
+								},
+								{
+									"key": "total ",
+									"value": "500.99",
+									"type": "text"
+								},
+								{
+									"key": "delivery_crew",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/orders/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "single order partial update as manager",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "total",
+									"value": "410.88",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/orders/3/"
+					},
+					"response": []
+				},
+				{
+					"name": "single order partial update as assigned dc",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 55f66cfa593b997ff18486713d302509f21cc7dd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "status",
+									"value": "False",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/orders/3/"
+					},
+					"response": []
+				},
+				{
+					"name": "single order partial update as unassigned dc/customer",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 06fd5b2e065513c4e64895a40f92ceedc7f9028a",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/orders/3/"
+					},
+					"response": []
+				},
+				{
+					"name": "single order delete as customer/dc/admin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 20bc947972caa16a51015bded9c3ff44f5394fcd",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/orders/2/"
+					},
+					"response": []
+				},
+				{
+					"name": "single order delete as manager",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 65dbccae895b94d78cbf83f81af3e7016f5438b1",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/orders/2/"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

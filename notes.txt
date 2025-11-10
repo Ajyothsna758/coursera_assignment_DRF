@@ -1,0 +1,31 @@
+admin:
+username: admin
+password: password789
+token: 6f19c68feab7fb2eed03ed20ffc55872af137c03
+
+managers:
+username: manager1
+password: password789
+token: 65dbccae895b94d78cbf83f81af3e7016f5438b1
+
+username: manager2
+password: password789
+token: c8c45cbc1c33a58fc3fa3098e1cf4537c790843f
+
+Delivery Crew:
+username: dc1
+password: password789
+token: 55f66cfa593b997ff18486713d302509f21cc7dd
+
+username: dc2
+password: password789
+token: 06fd5b2e065513c4e64895a40f92ceedc7f9028a
+
+Customers:
+username: customer1
+password: password789
+token: 20bc947972caa16a51015bded9c3ff44f5394fcd
+
+username: customer2
+password: password789
+token: 116287d70b4f59003679d731174fa26169346dfd
